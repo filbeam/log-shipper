@@ -10,7 +10,7 @@ primary_region = 'cdg'
   image = 'ghcr.io/superfly/fly-log-shipper:latest'
 
 [env]
-  PAPERTRAIL_ENCODING_CODEC="json"
+  PAPERTRAIL_ENCODING_CODEC='text'
 
 [[services]]
   http_checks = []
