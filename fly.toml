@@ -1,0 +1,20 @@
+# fly.toml app configuration file generated for filbeam-logshipper on 2025-09-24T16:28:28+04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'filbeam-logshipper'
+primary_region = 'cdg'
+
+[build]
+  image = 'ghcr.io/superfly/fly-log-shipper:latest'
+
+[env]
+  PAPERTRAIL_ENCODING_CODEC="json"
+
+[[services]]
+  http_checks = []
+  internal_port = 8686
+
+[[vm]]
+  size = 'shared-cpu-1x'
